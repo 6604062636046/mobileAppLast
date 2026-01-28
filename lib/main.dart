@@ -4,6 +4,7 @@ import 'package:water/topup_page.dart';
 import 'package:water/home_page.dart';
 import 'package:water/topup_report.dart';
 import 'package:water/balance_page.dart';
+import 'package:water/mylist_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/topup': (context) => const TopupPage(),
         '/topupReport': (context) => const TopupReport(),
         '/balancePage': (context) => const BalancePage(),
+        '/mylistPage': (context) => const MylistPage(),
       },
     );
   }

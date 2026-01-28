@@ -49,6 +49,16 @@ class _HomePageState extends State<HomePage> {
               },
               child: const Text('Balance / History'),
             ),
+            const SizedBox(height: 14,),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                  context, 
+                  '/mylistPage',
+                );
+              },
+              child: const Text('My list page'),
+            ),
           ],
         ),
       ),
