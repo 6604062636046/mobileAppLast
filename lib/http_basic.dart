@@ -5,6 +5,7 @@ import 'dart:convert';
 
 Future<String> fetchData() async {
   final response =
+      //await http.get(Uri.parse('https://itpart.net/mobile/api/product0xx.php'));
       await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'));
 
   if (response.statusCode == 200) {
@@ -12,8 +13,8 @@ Future<String> fetchData() async {
     String strBody = response.body.toString(); // return from the server
     debugPrint(strBody);
 
-    return strBody;
-    // return jSONbody['title'];
+    return strBody; //ตอนยังไม่แปลง
+    //return jSONbody['title']; //แปลงแล้ว
   } else {
     // throw an exception.
     throw Exception('problem..');

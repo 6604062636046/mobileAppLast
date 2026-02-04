@@ -27,14 +27,14 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // '/': (context) => const HomePage(),
-        '/': (context) => const MyFutureBuilderPage(),
+        '/': (context) => const HttpBasic(),
         '/about': (context) => const AboutPage(),
         '/topup': (context) => const TopupPage(),
         '/topupReport': (context) => const TopupReport(),
         '/balancePage': (context) => const BalancePage(),
         '/mylistPage': (context) => const MylistPage(),
         //'/myfuturebuilderPage': (context) => const MyFutureBuilderPage(),
-        'httpBasic': (context) => HttpBasic(),
+        //'httpBasic': (context) => HttpBasic(),
       },
     );
   }

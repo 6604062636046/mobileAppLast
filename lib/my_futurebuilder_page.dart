@@ -10,7 +10,7 @@ class MyFutureBuilderPage extends StatefulWidget {
 class _MyFutureBuilderPageState extends State<MyFutureBuilderPage> {
   // Simulating an asynchronous operation that returns a Future
   Future<String> fetchData() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 5));
     return "Hello, FutureBuilder!";
   }
 
@@ -32,6 +32,7 @@ class _MyFutureBuilderPageState extends State<MyFutureBuilderPage> {
                 return Text('${snapshot.error}');
               }
               return const CircularProgressIndicator();
+              //return const Text('wait a minutes ...', style: TextStyle(fontSize: 24),);
             },
           ),
         ));
