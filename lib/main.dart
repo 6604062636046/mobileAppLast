@@ -5,6 +5,8 @@ import 'package:water/home_page.dart';
 import 'package:water/topup_report.dart';
 import 'package:water/balance_page.dart';
 import 'package:water/mylist_page.dart';
+import 'package:water/my_futurebuilder_page.dart';
+import 'package:water/http_basic.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,12 +26,15 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
+        // '/': (context) => const HomePage(),
+        '/': (context) => const MyFutureBuilderPage(),
         '/about': (context) => const AboutPage(),
         '/topup': (context) => const TopupPage(),
         '/topupReport': (context) => const TopupReport(),
         '/balancePage': (context) => const BalancePage(),
         '/mylistPage': (context) => const MylistPage(),
+        //'/myfuturebuilderPage': (context) => const MyFutureBuilderPage(),
+        'httpBasic': (context) => HttpBasic(),
       },
     );
   }
