@@ -21,13 +21,26 @@ class TopupReport extends StatelessWidget {
             Text('ยอดเงิน: $amountStr บาท', style: const TextStyle(fontSize: 20)),
             Text('บันทึก: $note', style: const TextStyle(color: Colors.grey)),
             const SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                double amount = double.tryParse(amountStr) ?? 0.0;
-                Navigator.pop(context); // ปิดหน้า Report
-                Navigator.pop(context, amount); // ปิดหน้า Topup พร้อมส่งค่าเงินกลับไป
-              },
-              child: const Text('กลับหน้าหลัก'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    // Navigate to the dashboard (root '/') and remove previous routes
+                    Navigator.of(context).pushNamedAndRemoveUntil('/', (route) => false);
+                  },
+                  child: const Text('Completed'),
+                ),
+                const SizedBox(width: 16),
+                ElevatedButton(
+                  onPressed: () {
+                    double amount = double.tryParse(amountStr) ?? 0.0;
+                    Navigator.pop(context); // ปิดหน้า Report
+                    Navigator.pop(context, amount); // ปิดหน้า Topup พร้อมส่งค่าเงินกลับไป
+                  },
+                  child: const Text('กลับหน้าหลัก'),
+                ),
+              ],
             )
           ],
         ),
