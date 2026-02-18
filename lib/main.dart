@@ -7,6 +7,7 @@ import 'package:water/balance_page.dart';
 import 'package:water/mylist_page.dart';
 import 'package:water/my_futurebuilder_page.dart';
 import 'package:water/http_basic.dart';
+import 'package:water/dashboard_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,8 +27,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        // '/': (context) => const HomePage(),
-        '/': (context) => const HttpBasic(),
+         '/': (context) => const DashboardPage(),
         '/about': (context) => const AboutPage(),
         '/topup': (context) => const TopupPage(),
         '/topupReport': (context) => const TopupReport(),
